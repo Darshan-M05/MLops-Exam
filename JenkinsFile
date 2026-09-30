@@ -1,0 +1,22 @@
+pipeline {
+    agent any {
+        stages{
+            stage ('Checkout code'){
+                steps {
+                    echo "Checking code"
+                    checkout scm
+                }
+            stage ('Build code'){
+                steps{
+                    echo "Building code"
+                }
+            }
+            stage ('Validate code'){
+                steps {
+                    echo "Validating code"
+                }
+            }
+            }
+        }
+    }
+}
